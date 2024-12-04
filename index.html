@@ -24,24 +24,20 @@
     />
   </head>
   <body>
-    <!-- MAIN-Content -->
+    <!-- MAIN -->
     <main>
       <!-- SIDEBAR -->
-       <!-- This includes the email, name, contact details & scocial icons but most imp it has responsives layout for diff devices, tags -->
+      <!-- This includes the email, name, contact details & scocial icons but most imp it has responsives layout for diff devices, tags -->
       <aside class="sidebar" data-sidebar>
         <div class="sidebar-info">
           <figure class="avatar-box">
-            <img
-              src="./assets/images/JC001.jpg"
-              alt="Jay Choksi"
-              width="80"
-            />
+            <img src="./assets/images/JC001.jpg" alt="Jay Choksi" width="80" />
           </figure>
 
           <div class="info-content">
             <h1 class="name" title="Jay Choksi">Jay Choksi</h1>
 
-            <p class="title"> Web Dev X</p>
+            <p class="title">Web Dev X</p>
           </div>
 
           <button class="info_more-btn" data-sidebar-btn>
@@ -131,6 +127,63 @@
           </ul>
         </div>
       </aside>
+      <!-- MAIN-CONTENT -->
+      <!-- This includes the projects, skills, and about me section -->
+
+      <!-- MAIN- body structure for navbar,  -->
+
+      <div class="main-content">
+        <!--
+        - #NAVBAR
+      -->
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>About</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Resume</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Portfolio</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Blog</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Contact</button>
+            </li>
+          </ul>
+        </nav>
+        <!-- ABOUT- this will have my about me section with all the information related to MEEEEE -->
+        <article class="about active" data-page="about">
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+          </header>
+
+          <section class="about-text">
+            <p>
+              I'm Creative Director and UI/UX Designer from Sydney, Australia,
+              working in web development and print media. I enjoy turning
+              complex problems into simple, beautiful and intuitive designs.
+            </p>
+
+            <p>
+              My job is to build your website so that it is functional and
+              user-friendly but at the same time attractive. Moreover, I add
+              personal touch to your product and make sure that is eye-catching
+              and easy to use. My aim is to bring across your message and
+              identity in the most creative way. I created web design for many
+              famous brand companies.
+            </p>
+          </section>
+        </article>
+      </div>
     </main>
 
     <!-- Link for javascript file -->
