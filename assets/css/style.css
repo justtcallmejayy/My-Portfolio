@@ -1,1 +1,17 @@
 /* Main Styling File */
+:root {
+  /* Colors */
+  --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
+  --orange-yellow-crayola: hsl(45, 100%, 72%);
+  --white-2: hsl(0, 0%, 98%);
+  --smoky-black: hsl(0, 0%, 7%);
+
+  /* Font */
+  --ff-poppins: "Poppins", sans-serif;
+
+  /* Shadows */
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+
+  /* Transitions */
+  --transition-1: 0.25s ease;
+}
