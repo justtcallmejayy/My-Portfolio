@@ -3,23 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Jay Choksi's Portfolio" />
-    <!-- Added Meta tags for security of script file and stylesheet -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       http-equiv="Content-Security-Policy"
       content="script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jay Choksi-Portfolio</title>
-    <!-- Icon for webpage, style sheet linking, fonts linking -->
-    <link rel="shortcut icon" href="./assets/images/logoJC.png" type="image" />
+    <title>Jay Choksi Portfolio</title>
+    <link rel="shortcut icon" href="./assets/images/logoJC.png" type="image/png" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -27,98 +23,72 @@
     <!-- MAIN -->
     <main>
       <!-- SIDEBAR -->
-      <!-- This includes the email, name, contact details & scocial icons but most imp it has responsives layout for diff devices, tags -->
       <aside class="sidebar" data-sidebar>
         <div class="sidebar-info">
           <figure class="avatar-box">
             <img src="./assets/images/JC001.jpg" alt="Jay Choksi" width="80" />
           </figure>
-
           <div class="info-content">
             <h1 class="name" title="Jay Choksi">Jay Choksi</h1>
-
             <p class="title">Web Dev X</p>
           </div>
-
           <button class="info_more-btn" data-sidebar-btn>
             <span>Show Contacts</span>
-
             <ion-icon name="chevron-down"></ion-icon>
           </button>
         </div>
-
         <div class="sidebar-info_more">
           <div class="separator"></div>
-
           <ul class="contacts-list">
             <li class="contact-item">
               <div class="icon-box">
                 <ion-icon name="mail-outline"></ion-icon>
               </div>
-
               <div class="contact-info">
                 <p class="contact-title">Email</p>
-
-                <a href="mailto:jayy.choksi@gmail.com" class="contact-link"
-                  >jayy.choksi@gmail.com</a
-                >
+                <a href="mailto:jayy.choksi@gmail.com" class="contact-link">jayy.choksi@gmail.com</a>
               </div>
             </li>
-
             <li class="contact-item">
               <div class="icon-box">
                 <ion-icon name="phone-portrait-outline"></ion-icon>
               </div>
-
               <div class="contact-info">
                 <p class="contact-title">Phone</p>
-
-                <a href="tel:+12133522795" class="contact-link"
-                  >+1 (365) 883-3957</a
-                >
+                <a href="tel:+13658833957" class="contact-link">+1 (365) 883-3957</a>
               </div>
             </li>
-
             <li class="contact-item">
               <div class="icon-box">
                 <ion-icon name="calendar-outline"></ion-icon>
               </div>
-
               <div class="contact-info">
                 <p class="contact-title">Birthday</p>
-
-                <time datetime="1982-06-23">2 Febuary, 2004</time>
+                <time datetime="2004-02-02">2 February, 2004</time>
               </div>
             </li>
-
             <li class="contact-item">
               <div class="icon-box">
                 <ion-icon name="location-outline"></ion-icon>
               </div>
-
               <div class="contact-info">
                 <p class="contact-title">Location</p>
-
                 <address>Hamilton, Ontario</address>
               </div>
             </li>
           </ul>
-
           <div class="separator"></div>
-
           <ul class="social-list">
             <li class="social-item">
               <a href="#" class="social-link">
                 <ion-icon name="logo-github"></ion-icon>
               </a>
             </li>
-
             <li class="social-item">
               <a href="#" class="social-link">
                 <ion-icon name="logo-twitter"></ion-icon>
               </a>
             </li>
-
             <li class="social-item">
               <a href="#" class="social-link">
                 <ion-icon name="logo-instagram"></ion-icon>
@@ -127,70 +97,53 @@
           </ul>
         </div>
       </aside>
-      <!-- MAIN-CONTENT -->
-      <!-- This includes the projects, skills, and about me section -->
 
-      <!-- MAIN- body structure for navbar,  -->
-
+      <!-- MAIN CONTENT -->
       <div class="main-content">
-        <!--
-        - #NAVBAR
-      -->
-
+        <!-- NAVBAR -->
         <nav class="navbar">
           <ul class="navbar-list">
             <li class="navbar-item">
               <button class="navbar-link active" data-nav-link>About</button>
             </li>
-
             <li class="navbar-item">
               <button class="navbar-link" data-nav-link>Resume</button>
             </li>
-
             <li class="navbar-item">
               <button class="navbar-link" data-nav-link>Portfolio</button>
             </li>
-
             <li class="navbar-item">
               <button class="navbar-link" data-nav-link>Blog</button>
             </li>
-
             <li class="navbar-item">
               <button class="navbar-link" data-nav-link>Contact</button>
             </li>
           </ul>
         </nav>
-        <!-- ABOUT- this will have my about me section with all the information related to MEEEEE -->
+
+        <!-- ABOUT -->
         <article class="about active" data-page="about">
           <header>
             <h2 class="h2 article-title">About me</h2>
           </header>
-
           <section class="about-text">
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum,
-              vero? Quae quas ea quam blanditiis totam itaque magnam, id eum
-              aut, nesciunt, placeat rem odio aspernatur? Itaque vitae dicta
-              numquam nesciunt ea voluptates explicabo perspiciatis a porro
-              quidem, harum, quam, perferendis expedita exercitationem dolores
-              dolor odit accusamus doloribus aliquid natus?
+              I am a passionate Web Developer with experience in creating
+              responsive, user-friendly, and modern websites using cutting-edge
+              technologies.
             </p>
-
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              esse eaque omnis quas quasi quidem eos, quisquam repudiandae nemo
-              quibusdam, dolores aspernatur ab qui facere labore, distinctio ex.
-              Quisquam esse nesciunt vel exercitationem hic itaque.
+              With expertise in front-end and back-end development, I strive to
+              deliver impactful digital experiences.
             </p>
           </section>
         </article>
-        <!-- QUALITY/SKills/Services i can provide -->
-        <!-- QUALITY- this will have my expertise section with all the information related to MEEEEE -->
+
+        <!-- QUALITY/SKills/Services -->
         <article class="quality" data-page="quality">
           <header>
             <h2 class="h2 article-title">Quality &amp; Services</h2>
           </header>
-
           <section class="quality-text">
             <ul>
               <li>Web Development</li>
@@ -201,245 +154,58 @@
             </ul>
           </section>
         </article>
-      </div>
 
-      <section class="service">
-        <h3 class="h3 service-title">What I am currently capable of..</h3>
-
-        <ul class="service-list">
-          <li class="service-item">
-            <div class="service-icon-box">
-              <img
-                src="./assets/images/svg/web-design.svg
-                "
-                alt="design icon"
-                width="40"
-              />
-            </div>
-
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Web design</h4>
-
-              <p class="service-item-text">
-                The most modern and high-quality design made at a professional
-                level.
-              </p>
-            </div>
-          </li>
-
-          <li class="service-item">
-            <div class="service-icon-box">
-              <img
-                src="./assets/images/svg/site-browser.svg"
-                alt="Web development icon"
-                width="40"
-              />
-            </div>
-
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Web development</h4>
-
-              <p class="service-item-text">
-                High-quality development of sites at the professional level.
-              </p>
-            </div>
-          </li>
-
-          <li class="service-item">
-            <div class="service-icon-box">
-              <img
-                src="./assets/images/svg/mobile.svg"
-                alt="mobile app icon"
-                width="40"
-              />
-            </div>
-
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Mobile apps</h4>
-
-              <p class="service-item-text">
-                Professional development of applications for iOS and Android.
-              </p>
-            </div>
-          </li>
-
-          <li class="service-item">
-            <div class="service-icon-box">
-              <img
-                src="./assets/images/svg/web-design.svg"
-                alt="camera icon"
-                width="40"
-              />
-            </div>
-
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Photography</h4>
-
-              <p class="service-item-text">
-                I make high-quality photos of any category at a professional
-                level.
-              </p>
-            </div>
-          </li>
-        </ul>
-      </section>
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                University Of Engineering Pune
-              </h4>
-
-              <span>2021 — 2024</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
-                delenit atque corrupti, quos dolores et quas molestias exceptur.
-              </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">New york academy of Texas</h4>
-
-              <span>2018 — 2024</span>
-
-              <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda
-                ossimus, omnis voluptas assumenda est omnis..
-              </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                High school of art and design
-              </h4>
-
-              <span>2017 — 2018</span>
-
-              <p class="timeline-text">
-                Duis aute irure dolor in reprehenderit in voluptate, quila
-                voluptas mag odit aut fugit, sed consequuntur magni dolores eos.
-              </p>
-            </li>
-          </ol>
-        </section>
-
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Creative director</h4>
-
-              <span>2015 — Present</span>
-
-              <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum
-                delenit atque corrupti, quos dolores et qvuas molestias
-                exceptur.
-              </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Art director</h4>
-
-              <span>2013 — 2015</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
-                delenit atque corrupti, quos dolores et quas molestias exceptur.
-              </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Web designer</h4>
-
-              <span>2010 — 2013</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
-                delenit atque corrupti, quos dolores et quas molestias exceptur.
-              </p>
-            </li>
-          </ol>
-        </section>
-
-        <section class="skill">
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
+        <section class="service">
+          <h3 class="h3 service-title">What I am currently capable of..</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/svg/web-design.svg" alt="design icon" width="40" />
               </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%"></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
               </div>
             </li>
-
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/svg/site-browser.svg" alt="Web development icon" width="40" />
               </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%"></div>
-              </div>
-            </li>
-
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%"></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
               </div>
             </li>
-
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/svg/mobile.svg" alt="mobile app icon" width="40" />
               </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%"></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/svg/web-design.svg" alt="camera icon" width="40" />
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+                <p class="service-item-text">
+                  I make high-quality photos of any category at a professional level.
+                </p>
               </div>
             </li>
           </ul>
         </section>
-      </article>
+      </div>
+      <script src="./assets/js/script.js"></script>
     </main>
-
-    <!-- Link for javascript file -->
   </body>
 </html>
