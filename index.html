@@ -12,7 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <!-- CDN link for font awsome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -31,7 +30,7 @@
           </figure>
           <div class="info-content">
             <h1 class="name" title="Your Name">Jay Choksi</h1>
-            <p class="title">Your Role (e.g., Web Developer)</p>
+            <p class="title">Full Stack Developer</p>
           </div>
           <button class="info_more-btn" data-sidebar-btn>
             <span>Show Contacts</span>
@@ -40,21 +39,17 @@
         <div class="sidebar-info_more">
           <ul class="contacts-list">
             <li class="contact-item">
-              <div class="icon-box">
-                <i class="fa-regular fa-envelope"></i>
-              </div>
+              <div class="icon-box"><i class="fa-regular fa-envelope"></i></div>
               <div class="contact-info">
                 <p class="contact-title">Email</p>
-                <a href="mailto:youremail@example.com">jayy.choksi@gmail.com</a>
+                <a href="mailto:jayy.choksi@gmail.com">jayy.choksi@gmail.com</a>
               </div>
             </li>
             <li class="contact-item">
-              <div class="icon-box">
-                <i class="fa-solid fa-phone"></i>
-              </div>
+              <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
               <div class="contact-info">
                 <p class="contact-title">Phone</p>
-                <a href="tel:+1234567890">+1(365)883-3957</a>
+                <a href="tel:+13658833957">+1 (365) 883-3957</a>
               </div>
             </li>
             <li class="contact-item">
@@ -63,7 +58,7 @@
               </div>
               <div class="contact-info">
                 <p class="contact-title">Birthday</p>
-                <time datetime="YYYY-MM-DD">2004-02-18</time>
+                <time datetime="2004-02-18">18 February, 2004</time>
               </div>
             </li>
             <li class="contact-item">
@@ -72,19 +67,19 @@
               </div>
               <div class="contact-info">
                 <p class="contact-title">Location</p>
-                <address>HAmilton, Canada</address>
+                <address>Hamilton, Canada</address>
               </div>
             </li>
           </ul>
           <ul class="social-list">
             <li class="social-item">
               <a href="#" class="social-link"
-                ><ion-icon name="logo-github"></ion-icon
+                ><i class="fa-brands fa-github"></i
               ></a>
             </li>
             <li class="social-item">
               <a href="#" class="social-link"
-                ><ion-icon name="logo-linkedin"></ion-icon
+                ><i class="fa-brands fa-linkedin"></i
               ></a>
             </li>
           </ul>
@@ -93,13 +88,20 @@
 
       <!-- MAIN CONTENT -->
       <div class="main-content">
+        <!-- NAVBAR -->
         <nav class="navbar">
           <ul class="navbar-list">
             <li class="navbar-item">
               <button class="navbar-link active" data-nav-link>About</button>
             </li>
             <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Resume</button>
+            </li>
+            <li class="navbar-item">
               <button class="navbar-link" data-nav-link>Portfolio</button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Blog</button>
             </li>
             <li class="navbar-item">
               <button class="navbar-link" data-nav-link>Contact</button>
@@ -107,34 +109,69 @@
           </ul>
         </nav>
 
+        <!-- ABOUT SECTION -->
         <article class="about active" data-page="about">
           <header><h2 class="article-title">About Me</h2></header>
           <section>
             <p>
-              Write about yourself, your skills, and what you are passionate
-              about.
+              I am a passionate developer with experience in building modern and
+              responsive web applications.
             </p>
           </section>
         </article>
 
+        <!-- RESUME SECTION -->
+        <article class="resume" data-page="resume">
+          <header><h2 class="article-title">Resume</h2></header>
+          <section>
+            <h3>Education</h3>
+            <ul>
+              <li>Bachelor’s in Computer Science - University of Hamilton</li>
+            </ul>
+            <h3>Experience</h3>
+            <ul>
+              <li>Full Stack Developer - Tech Company</li>
+            </ul>
+          </section>
+        </article>
+
+        <!-- PORTFOLIO SECTION -->
         <article class="portfolio" data-page="portfolio">
           <header><h2 class="article-title">Portfolio</h2></header>
           <section>
             <div class="project-list">
               <div class="project-item">
-                <h3>Project Title</h3>
-                <p>Short description of the project.</p>
+                <h3>Project One</h3>
+                <p>Short description of Project One.</p>
               </div>
               <div class="project-item">
-                <h3>Project Title</h3>
-                <p>Short description of the project.</p>
+                <h3>Project Two</h3>
+                <p>Short description of Project Two.</p>
               </div>
             </div>
           </section>
         </article>
 
+        <!-- BLOG SECTION -->
+        <article class="blog" data-page="blog">
+          <header><h2 class="article-title">Blog</h2></header>
+          <section>
+            <div class="blog-list">
+              <article class="blog-item">
+                <h3>Blog Title 1</h3>
+                <p>Short description of the blog post.</p>
+              </article>
+              <article class="blog-item">
+                <h3>Blog Title 2</h3>
+                <p>Short description of the blog post.</p>
+              </article>
+            </div>
+          </section>
+        </article>
+
+        <!-- CONTACT SECTION -->
         <article class="contact" data-page="contact">
-          <header><h2 class="article-title">Contact Me</h2></header>
+          <header><h2 class="article-title">Contact</h2></header>
           <section>
             <form data-form>
               <input type="text" name="name" placeholder="Your Name" required />
