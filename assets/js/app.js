@@ -102,18 +102,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Filter variables
+  // Filter functionality
+  const filterButtons = document.querySelectorAll("[data-filter-btn]");
   const filterItems = document.querySelectorAll("[data-filter-item]");
 
-  const filterFunc = function (selectedValue) {
-    filterItems.forEach((item) => {
-      if (selectedValue === "all" || selectedValue === item.dataset.category) {
-        item.classList.add("active");
-      } else {
-        item.classList.remove("active");
-      }
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const category = button.innerText.toLowerCase();
+
+      // Toggle active class on buttons
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      // Filter projects
+      filterItems.forEach((item) => {
+        const itemCategory = item.dataset.category;
+        if (category === "all" || category === itemCategory) {
+          item.classList.add("active");
+        } else {
+          item.classList.remove("active");
+        }
+      });
     });
-  };
+  });
 
   // Add event in all filter button items for large screen
   let lastClickedBtn = filterBtn[0];
@@ -135,18 +146,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const formInputs = document.querySelectorAll("[data-form-input]");
   const formBtn = document.querySelector("[data-form-btn]");
 
-  if (formInputs.length > 0 && form) {
-    formInputs.forEach((input) => {
-      input.addEventListener("input", function () {
-        // Check form validation
-        if (form.checkValidity() && formBtn) {
-          formBtn.removeAttribute("disabled");
-        } else if (formBtn) {
-          formBtn.setAttribute("disabled", "");
-        }
-      });
+  // Add input event to enable/disable the submit button based on form validation
+  formInputs.forEach((input) => {
+    input.addEventListener("input", () => {
+      if (form.checkValidity()) {
+        formBtn.removeAttribute("disabled");
+      } else {
+        formBtn.setAttribute("disabled", "");
+      }
     });
-  }
+  });
+
+  // Add submit event to handle form submissions (optional, for later back-end integration)
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Thank you for your message! I’ll get back to you soon.");
+    form.reset();
+    formBtn.setAttribute("disabled", ""); // Disable the button after submission
+  });
 
   // Page navigation variables
   const navigationLinks = document.querySelectorAll("[data-nav-link]");
