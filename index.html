@@ -200,32 +200,58 @@
         <article class="portfolio" data-page="portfolio">
           <header><h2 class="article-title">Portfolio</h2></header>
           <section>
-            <div class="project-list">
-              <div class="project-item">
-                <h3>Project One</h3>
-                <p>Short description of Project One.</p>
-              </div>
-              <div class="project-item">
-                <h3>Project Two</h3>
-                <p>Short description of Project Two.</p>
-              </div>
+            <div class="filter-controls">
+              <button class="filter-btn active" data-filter-btn>All</button>
+              <button class="filter-btn" data-filter-btn>Web Design</button>
+              <button class="filter-btn" data-filter-btn>Applications</button>
+              <button class="filter-btn" data-filter-btn>
+                Web Development
+              </button>
             </div>
-          </section>
-        </article>
 
-        <!-- BLOG SECTION -->
-        <article class="blog" data-page="blog">
-          <header><h2 class="article-title">Blog</h2></header>
-          <section>
-            <div class="blog-list">
-              <article class="blog-item">
-                <h3>Blog Title 1</h3>
-                <p>Short description of the blog post.</p>
-              </article>
-              <article class="blog-item">
-                <h3>Blog Title 2</h3>
-                <p>Short description of the blog post.</p>
-              </article>
+            <div class="project-list">
+              <div
+                class="project-item"
+                data-filter-item
+                data-category="web design"
+              >
+                <a href="#">
+                  <figure>
+                    <img src="assets/images/project-1.jpg" alt="Project One" />
+                    <figcaption>Project One</figcaption>
+                  </figure>
+                </a>
+                <p>Modern web design for a creative agency.</p>
+              </div>
+              <div
+                class="project-item"
+                data-filter-item
+                data-category="applications"
+              >
+                <a href="#">
+                  <figure>
+                    <img src="assets/images/project-2.png" alt="Project Two" />
+                    <figcaption>Project Two</figcaption>
+                  </figure>
+                </a>
+                <p>A sleek mobile application for e-commerce.</p>
+              </div>
+              <div
+                class="project-item"
+                data-filter-item
+                data-category="web development"
+              >
+                <a href="#">
+                  <figure>
+                    <img
+                      src="assets/images/project-3.jpg"
+                      alt="Project Three"
+                    />
+                    <figcaption>Project Three</figcaption>
+                  </figure>
+                </a>
+                <p>Responsive web app for online learning.</p>
+              </div>
             </div>
           </section>
         </article>
@@ -234,20 +260,40 @@
         <article class="contact" data-page="contact">
           <header><h2 class="article-title">Contact</h2></header>
           <section>
-            <form data-form>
-              <input type="text" name="name" placeholder="Your Name" required />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required
-              />
+            <p>
+              Have questions or want to collaborate? Fill out the form below,
+              and I'll get back to you as soon as possible.
+            </p>
+            <form class="contact-form" data-form>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-input"
+                  placeholder="Your Name"
+                  data-form-input
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Your Email"
+                  data-form-input
+                  required
+                />
+              </div>
               <textarea
                 name="message"
+                class="form-input"
                 placeholder="Your Message"
+                rows="5"
+                data-form-input
                 required
               ></textarea>
-              <button type="submit">Send Message</button>
+              <button type="submit" class="form-btn" data-form-btn disabled>
+                Send Message
+              </button>
             </form>
           </section>
         </article>
