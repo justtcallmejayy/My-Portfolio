@@ -109,84 +109,177 @@
 
         <!-- ABOUT SECTION -->
         <article class="about active" data-page="about">
-          <header><h2 class="article-title">About Me</h2></header>
-          <section>
+          <header>
+            <h2 class="article-title">About Me</h2>
+          </header>
+          <section class="about-text">
             <p>
               I am a passionate developer with experience in building modern and
-              responsive web applications.
+              responsive web applications. My expertise lies in crafting
+              intuitive designs and robust functionalities to deliver
+              exceptional user experiences.
             </p>
+            <p>
+              I enjoy turning complex ideas into simple, user-friendly solutions
+              that resonate with users globally.
+            </p>
+          </section>
+          <section class="service">
+            <h3 class="service-title">What I Offer</h3>
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/svg/web-design.svg"
+                    alt="design icon"
+                    width="40"
+                  />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="service-item-title">Web Design</h4>
+                  <p class="service-item-text">
+                    High-quality, modern designs tailored to user needs.
+                  </p>
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/svg/site-browser.svg"
+                    alt="development icon"
+                    width="40"
+                  />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="service-item-title">Web Development</h4>
+                  <p class="service-item-text">
+                    End-to-end development for scalable and dynamic websites.
+                  </p>
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/svg/mobile.svg"
+                    alt="app icon"
+                    width="40"
+                  />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="service-item-title">Mobile Apps</h4>
+                  <p class="service-item-text">
+                    Native and cross-platform apps for seamless user
+                    experiences.
+                  </p>
+                </div>
+              </li>
+            </ul>
           </section>
         </article>
 
         <!-- RESUME SECTION -->
         <article class="resume" data-page="resume">
-          <header><h2 class="article-title">Resume</h2></header>
+          <header>
+            <h2 class="article-title">Resume</h2>
+          </header>
+
+          <!-- Education -->
           <section class="timeline">
-            <h3 class="timeline-heading">Education</h3>
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+              <h3 class="timeline-heading">Education</h3>
+            </div>
             <ul class="timeline-list">
               <li class="timeline-item">
-                <h4>Bachelor’s in Computer Science</h4>
-                <p>University of Hamilton, 2020–2024</p>
+                <h4 class="timeline-item-title">
+                  Bachelor’s in Computer Science
+                </h4>
+                <span>University of Hamilton, 2020–2024</span>
                 <p>
                   Focused on software development, data structures, and AI
-                  technologies.
+                  technologies. Completed projects on web development and
+                  machine learning applications.
                 </p>
               </li>
               <li class="timeline-item">
-                <h4>High School Diploma</h4>
-                <p>Hamilton High School, 2016–2020</p>
+                <h4 class="timeline-item-title">High School Diploma</h4>
+                <span>Hamilton High School, 2016–2020</span>
                 <p>
                   Graduated with honors in mathematics and computer science.
                 </p>
               </li>
             </ul>
           </section>
+
+          <!-- Experience -->
           <section class="timeline">
-            <h3 class="timeline-heading">Experience</h3>
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="briefcase-outline"></ion-icon>
+              </div>
+              <h3 class="timeline-heading">Experience</h3>
+            </div>
             <ul class="timeline-list">
               <li class="timeline-item">
-                <h4>Full Stack Developer</h4>
-                <p>Tech Solutions Inc., 2024–Present</p>
+                <h4 class="timeline-item-title">Full Stack Developer</h4>
+                <span>Tech Solutions Inc., 2024–Present</span>
                 <p>
-                  Developed and maintained web applications using React,
-                  Node.js, and MongoDB.
+                  Designed and maintained scalable web applications using React,
+                  Node.js, and MongoDB. Led a team to build an e-commerce
+                  platform serving over 10,000 users.
                 </p>
               </li>
               <li class="timeline-item">
-                <h4>Intern - Software Developer</h4>
-                <p>Startup X, Summer 2023</p>
+                <h4 class="timeline-item-title">Intern - Software Developer</h4>
+                <span>Startup X, Summer 2023</span>
                 <p>
-                  Assisted in building a user-friendly e-commerce platform using
-                  Django.
+                  Contributed to developing a user-friendly e-commerce platform
+                  using Django and REST APIs.
                 </p>
               </li>
             </ul>
           </section>
+
+          <!-- Skills -->
           <section class="skills">
-            <h3 class="skills-title">Skills</h3>
+            <h3 class="skills-title">My Skills</h3>
             <ul class="skills-list">
               <li class="skills-item">
-                <span>JavaScript</span>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="width: 90%"></div>
+                <div class="title-wrapper">
+                  <h5>JavaScript</h5>
+                  <data value="90">90%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
                 </div>
               </li>
               <li class="skills-item">
-                <span>React.js</span>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="width: 85%"></div>
+                <div class="title-wrapper">
+                  <h5>React.js</h5>
+                  <data value="85">85%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 85%"></div>
                 </div>
               </li>
               <li class="skills-item">
-                <span>Node.js</span>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="width: 80%"></div>
+                <div class="title-wrapper">
+                  <h5>Node.js</h5>
+                  <data value="80">80%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
                 </div>
               </li>
               <li class="skills-item">
-                <span>UI/UX Design</span>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="width: 70%"></div>
+                <div class="title-wrapper">
+                  <h5>UI/UX Design</h5>
+                  <data value="70">70%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 70%"></div>
                 </div>
               </li>
             </ul>
@@ -195,59 +288,86 @@
 
         <!-- PORTFOLIO SECTION -->
         <article class="portfolio" data-page="portfolio">
-          <header><h2 class="article-title">Portfolio</h2></header>
-          <section>
-            <div class="filter-controls">
-              <button class="filter-btn active" data-filter-btn>All</button>
-              <button class="filter-btn" data-filter-btn>Web Design</button>
-              <button class="filter-btn" data-filter-btn>Applications</button>
-              <button class="filter-btn" data-filter-btn>
-                Web Development
-              </button>
-            </div>
+          <header>
+            <h2 class="article-title">Portfolio</h2>
+          </header>
+
+          <section class="projects">
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button class="active" data-filter-btn>All</button>
+              </li>
+              <li class="filter-item">
+                <button data-filter-btn>Web Design</button>
+              </li>
+              <li class="filter-item">
+                <button data-filter-btn>Applications</button>
+              </li>
+              <li class="filter-item">
+                <button data-filter-btn>Web Development</button>
+              </li>
+            </ul>
 
             <div class="project-list">
               <div
-                class="project-item"
+                class="project-item active"
                 data-filter-item
                 data-category="web design"
               >
                 <a href="#">
-                  <figure>
-                    <img src="assets/images/project-1.jpg" alt="Project One" />
-                    <figcaption>Project One</figcaption>
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/project-1.jpg"
+                      alt="Project One"
+                      loading="lazy"
+                    />
                   </figure>
+                  <h3 class="project-title">Creative Agency Website</h3>
+                  <p class="project-category">Web Design</p>
                 </a>
-                <p>Modern web design for a creative agency.</p>
               </div>
               <div
-                class="project-item"
+                class="project-item active"
                 data-filter-item
                 data-category="applications"
               >
                 <a href="#">
-                  <figure>
-                    <img src="assets/images/project-2.png" alt="Project Two" />
-                    <figcaption>Project Two</figcaption>
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/project-2.png"
+                      alt="E-Commerce App"
+                      loading="lazy"
+                    />
                   </figure>
+                  <h3 class="project-title">E-Commerce App</h3>
+                  <p class="project-category">Applications</p>
                 </a>
-                <p>A sleek mobile application for e-commerce.</p>
               </div>
               <div
-                class="project-item"
+                class="project-item active"
                 data-filter-item
                 data-category="web development"
               >
                 <a href="#">
-                  <figure>
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
                     <img
-                      src="assets/images/project-3.jpg"
-                      alt="Project Three"
+                      src="./assets/images/project-3.jpg"
+                      alt="Online Learning Platform"
+                      loading="lazy"
                     />
-                    <figcaption>Project Three</figcaption>
                   </figure>
+                  <h3 class="project-title">Online Learning Platform</h3>
+                  <p class="project-category">Web Development</p>
                 </a>
-                <p>Responsive web app for online learning.</p>
               </div>
             </div>
           </section>
