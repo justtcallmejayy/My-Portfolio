@@ -172,11 +172,12 @@ body {
 
 .sidebar,
 article {
-  background: var(--eerie-black-2);
-  border: 1px solid var(--jet);
-  border-radius: 20px;
-  padding: 15px;
-  box-shadow: var(--shadow-1);
+  background: var(--onyx);
+  color: var(--white-2);
+  border: 1px solid var(--blue-green);
+  border-radius: 18px;
+  box-shadow: var(--shadow-2);
+
   z-index: 1;
 }
 
