@@ -479,7 +479,8 @@ main {
   color: var(--text-color);
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
-  box-shadow: var(--shadow-2);
+  border-top: 2px solid var(--light-gray);
+  box-shadow: var(--shadow-1);
   border-radius: 12px 12px 0 0;
   z-index: 5;
 }
@@ -506,7 +507,7 @@ main {
 }
 
 .navbar-link.active {
-  color: var(--accent-color);
+  color: var(--primary-color);
 }
 
 /*-----------------------------------*\
@@ -515,10 +516,12 @@ main {
 
 .about .article-title {
   margin-bottom: 15px;
+    color: var(--primary-color);
+  font-size: var(--fs-2);
 }
 
 .about-text {
-  color: var(--light-gray);
+  color: var(--secondary-text);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
