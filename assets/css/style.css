@@ -11,57 +11,38 @@
 \*-----------------------------------*/
 
 :root {
-  /**
-   * colors
-   */
+  /* Light Mode Colors */
+  --base-color: #f9f9f9; /* Soft light gray for background */
+  --base-variant: #ffffff; /* Bright white for elements */
+  --text-color: #1a1a1a; /* Dark gray for primary text */
+  --secondary-text: #6c757d; /* Subtle gray for secondary text */
+  --primary-color: #0066cc; /* Vibrant blue for accents */
+  --accent-color: #ff6f61; /* Warm red for highlights */
+  --transition-speed: 0.3s;
 
   /* gradient */
+  /* Gradient Colors */
   --bg-gradient-onyx: linear-gradient(
     to bottom right,
-    hsl(210, 60%, 45%) 3%,
-    hsl(210, 50%, 20%) 97%
+    hsl(210, 36%, 96%) 0%,
+    hsl(210, 25%, 92%) 100%
   );
   --bg-gradient-jet: linear-gradient(
       to bottom right,
-      hsla(210, 60%, 15%, 0.251) 0%,
-      hsla(210, 50%, 10%, 0) 100%
+      hsla(210, 10%, 85%, 0.5) 0%,
+      hsla(210, 10%, 75%, 0) 100%
     ),
-    hsl(210, 50%, 12%);
-  --bg-gradient-yellow-1: linear-gradient(
-    to bottom right,
-    hsl(50, 100%, 70%) 0%,
-    hsla(50, 100%, 65%, 0) 50%
-  );
-  --bg-gradient-yellow-2: linear-gradient(
-      135deg,
-      hsla(50, 100%, 70%, 0.251) 0%,
-      hsla(50, 100%, 60%, 0) 59.86%
-    ),
-    hsl(210, 50%, 12%);
-  --border-gradient-onyx: linear-gradient(
-    to bottom right,
-    hsl(210, 50%, 30%) 0%,
-    hsla(210, 50%, 30%, 0) 50%
-  );
-  --text-gradient-yellow: linear-gradient(
-    to right,
-    hsl(50, 100%, 70%),
-    hsl(45, 100%, 65%)
-  );
+    hsl(210, 36%, 90%);
+  /* Solid Colors */
+  --white: #ffffff;
+  --light-gray: #dee2e6;
+  --gray: #adb5bd;
+  --dark-gray: #343a40;
+  --black: #212529;
 
-  /* solid */
-  --jet: hsl(210, 50%, 25%);
-  --onyx: hsl(210, 50%, 15%);
-  --eerie-black-1: hsl(210, 50%, 12%);
-  --eerie-black-2: hsl(210, 50%, 10%);
-  --smoky-black: hsl(210, 50%, 5%);
-  --white-1: hsl(0, 0%, 98%);
-  --white-2: hsl(0, 0%, 100%);
-  --orange-yellow-crayola: hsl(50, 100%, 70%);
-  --vegas-gold: hsl(50, 55%, 60%);
-  --light-gray: hsl(0, 0%, 85%);
-  --light-gray-70: hsla(0, 0%, 85%, 0.7);
-  --bittersweet-shimmer: hsl(0, 45%, 50%);
+  /* Shadow */
+  --shadow-1: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+  --shadow-2: 0 8px 12px hsla(0, 0%, 0%, 0.1); 
 
   /**
    * typography
@@ -89,7 +70,7 @@
   /**
    * shadow
    */
-
+  
   --shadow-1: -4px 8px 24px hsla(210, 50%, 0%, 0.25);
   --shadow-2: 0 16px 30px hsla(210, 50%, 0%, 0.25);
   --shadow-3: 0 16px 40px hsla(210, 50%, 0%, 0.25);
@@ -102,6 +83,16 @@
 
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
+}
+
+.darkmode {
+  /* Dark Mode Colors */
+  --base-color: #121212; /* Deep gray for dark background */
+  --base-variant: #1c1c1c; /* Slightly lighter for elements */
+  --text-color: #f8f9fa; /* Soft white for text */
+  --secondary-text: #d3d3d3; /* Muted gray for secondary text */
+  --primary-color: #4dabf7; /* Vibrant blue for accents */
+  --accent-color: #f06565; /* Warm coral for highlights */
 }
 
 /*-----------------------------------*\
@@ -163,7 +154,11 @@ html {
 }
 
 body {
-  background: var(--smoky-black);
+  background-color: var(--base-color);
+  color: var(--text-color);
+  font-family: var(--ff-verdana);
+  transition: background-color var(--transition-speed),
+    color var(--transition-speed);
 }
 
 /*-----------------------------------*\
@@ -172,12 +167,12 @@ body {
 
 .sidebar,
 article {
-  background: var(--onyx);
+  background-color: var(--base-variant);
   color: var(--white-2);
-  border: 1px solid var(--blue-green);
-  border-radius: 18px;
-  box-shadow: var(--shadow-2);
+  border: 1px solid var(--light-gray);
 
+  border-radius: 18px;
+  box-shadow: var(--shadow-1);
   z-index: 1;
 }
 
@@ -480,11 +475,12 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background-color: var(--base-variant);
+  color: var(--text-color);
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
-  border-radius: 12px 12px 0 0;
   box-shadow: var(--shadow-2);
+  border-radius: 12px 12px 0 0;
   z-index: 5;
 }
 
@@ -497,10 +493,11 @@ main {
 }
 
 .navbar-link {
-  color: var(--light-gray);
+  color: var(--secondary-text);
+
   font-size: var(--fs-8);
   padding: 20px 7px;
-  transition: color var(--transition-1);
+  transition: color var(--transition-speed);
 }
 
 .navbar-link:hover,
@@ -509,7 +506,7 @@ main {
 }
 
 .navbar-link.active {
-  color: var(--orange-yellow-crayola);
+  color: var(--accent-color);
 }
 
 /*-----------------------------------*\
@@ -2024,4 +2021,37 @@ textarea.form-input::-webkit-resizer {
   .timeline-text {
     max-width: 700px;
   }
+}
+
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+  z-index: 1000; /* Ensures it's above all other elements */
+}
+
+#theme-switch svg {
+  fill: var(--primary-color);
+}
+
+#theme-switch svg:last-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+  display: block;
 }
