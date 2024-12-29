@@ -42,7 +42,7 @@
 
   /* Shadow */
   --shadow-1: 0 4px 6px hsla(0, 0%, 0%, 0.1);
-  --shadow-2: 0 8px 12px hsla(0, 0%, 0%, 0.1); 
+  --shadow-2: 0 8px 12px hsla(0, 0%, 0%, 0.1);
 
   /**
    * typography
@@ -70,7 +70,7 @@
   /**
    * shadow
    */
-  
+
   --shadow-1: -4px 8px 24px hsla(210, 50%, 0%, 0.25);
   --shadow-2: 0 16px 30px hsla(210, 50%, 0%, 0.25);
   --shadow-3: 0 16px 40px hsla(210, 50%, 0%, 0.25);
@@ -516,7 +516,7 @@ main {
 
 .about .article-title {
   margin-bottom: 15px;
-    color: var(--primary-color);
+  color: var(--primary-color);
   font-size: var(--fs-2);
 }
 
@@ -822,6 +822,7 @@ main {
 
 .timeline {
   margin-bottom: 30px;
+  border-left: 2px solid var(--primary-color);
 }
 
 .timeline .title-wrapper {
@@ -838,6 +839,7 @@ main {
 
 .timeline-item {
   position: relative;
+  color: var(--text-color);
 }
 
 .timeline-item:not(:last-child) {
@@ -846,6 +848,8 @@ main {
 
 .timeline-item-title {
   font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  color: var(--secondary-text);
   line-height: 1.3;
   margin-bottom: 7px;
 }
@@ -854,6 +858,10 @@ main {
   color: var(--vegas-gold);
   font-weight: var(--fw-400);
   line-height: 1.6;
+}
+
+.timeline-item span {
+  color: var(--secondary-text);
 }
 
 .timeline-item:not(:last-child)::before {
@@ -1002,6 +1010,20 @@ main {
 
 .project-item {
   display: none;
+  background-color: var(--base-variant);
+  color: var(--text-color);
+  border: 1px solid var(--light-gray);
+  box-shadow: var(--shadow-1);
+  transition: transform 0.3s;
+}
+
+.project-item:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-2);
+}
+
+.project-title {
+  color: var(--primary-color);
 }
 
 .project-item.active {
@@ -1222,6 +1244,11 @@ main {
 
 .contact-form {
   margin-bottom: 10px;
+  background-color: var(--base-variant);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-1);
 }
 
 .form-title {
@@ -1236,13 +1263,17 @@ main {
 }
 
 .form-input {
-  color: var(--white-2);
+  color: var(--text-color);
   font-size: var(--fs-6);
   font-weight: var(--fw-400);
   padding: 13px 20px;
-  border: 1px solid var(--jet);
-  border-radius: 14px;
+  border: 1px solid var(--light-gray);
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
   outline: none;
+  background-color: var(--light-gray);
 }
 
 .form-input::placeholder {
@@ -1250,7 +1281,8 @@ main {
 }
 
 .form-input:focus {
-  border-color: var(--orange-yellow-crayola);
+  border-color: var(--primary-color);
+  outline: none;
 }
 
 textarea.form-input {
@@ -1272,19 +1304,21 @@ textarea.form-input::-webkit-resizer {
 .form-btn {
   position: relative;
   width: 100%;
-  background: var(--border-gradient-onyx);
-  color: var(--orange-yellow-crayola);
+  background: var(--primary-color);
+  color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 13px 20px;
-  border-radius: 14px;
+  padding: 10px 20px;
+  border-radius: 5px;
   font-size: var(--fs-6);
   text-transform: capitalize;
   box-shadow: var(--shadow-3);
   z-index: 1;
-  transition: var(--transition-1);
+  transition: background-color var(--transition-speed);
+
+  cursor: pointer;
 }
 
 .form-btn::before {
@@ -1302,7 +1336,7 @@ textarea.form-input::-webkit-resizer {
 }
 
 .form-btn:hover {
-  background: var(--bg-gradient-yellow-1);
+  background: var(--primary-color);
 }
 
 .form-btn:hover::before {
@@ -1705,6 +1739,12 @@ textarea.form-input::-webkit-resizer {
    * NAVBAR
    */
 
+  .navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+
   .navbar-link {
     --fs-8: 15px;
   }
@@ -1766,12 +1806,26 @@ textarea.form-input::-webkit-resizer {
     grid-template-columns: 1fr 1fr;
   }
 
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
   /**
    * CONTACT
    */
 
   .input-wrapper {
     grid-template-columns: 1fr 1fr;
+  }
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
   }
 
   .form-btn {
@@ -1816,6 +1870,10 @@ textarea.form-input::-webkit-resizer {
   main {
     margin-bottom: 60px;
   }
+  .main-content {
+    display: flex;
+    gap: 20px;
+  }
 
   .main-content {
     position: relative;
@@ -1826,6 +1884,10 @@ textarea.form-input::-webkit-resizer {
   /**
    * NAVBAR
    */
+
+  .sidebar {
+    width: 300px;
+  }
 
   .navbar {
     position: absolute;
@@ -2057,4 +2119,41 @@ textarea.form-input::-webkit-resizer {
 
 .darkmode #theme-switch svg:last-child {
   display: block;
+}
+
+/*-----------------------------------*\
+  #DARK MODE SPECIFIC
+\*-----------------------------------*/
+
+.darkmode .sidebar,
+.darkmode article {
+  background-color: var(--base-variant);
+  color: var(--text-color);
+  border: 1px solid var(--dark-gray);
+}
+
+.darkmode .navbar {
+  background-color: var(--base-variant);
+  color: var(--text-color);
+  border-top: 2px solid var(--dark-gray);
+}
+
+.darkmode .form-input {
+  background-color: var(--dark-gray);
+  border: 1px solid var(--dark-gray);
+  color: var(--text-color);
+}
+
+.darkmode footer {
+  background-color: var(--base-variant);
+  color: var(--text-color);
+}
+
+.darkmode .form-btn {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.darkmode .form-btn:hover {
+  background-color: var(--accent-color);
 }
