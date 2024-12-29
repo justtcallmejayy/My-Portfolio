@@ -74,3 +74,33 @@ navigationLinks.forEach((link) => {
     window.scrollTo(0, 0);
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const themeSwitch = document.getElementById("theme-switch");
+  let darkMode = localStorage.getItem("darkMode");
+
+  const enableDarkMode = () => {
+    document.body.classList.add("darkmode");
+    localStorage.setItem("darkMode", "enabled");
+  };
+
+  const disableDarkMode = () => {
+    document.body.classList.remove("darkmode");
+    localStorage.setItem("darkMode", "disabled");
+  };
+
+  // Load the saved preference
+  if (darkMode === "enabled") {
+    enableDarkMode();
+  }
+
+  // Add event listener to the button
+  themeSwitch.addEventListener("click", () => {
+    darkMode = localStorage.getItem("darkMode"); // Recheck state
+    if (darkMode !== "enabled") {
+      enableDarkMode();
+    } else {
+      disableDarkMode();
+    }
+  });
+});
