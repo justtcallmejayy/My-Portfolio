@@ -15,53 +15,66 @@
    * colors
    */
 
-  /* gradient */
+  /* Neutral (60%) */
+  --neutral-color-light: hsl(0, 0%, 95%);
+  --neutral-color-dark: hsl(210, 10%, 15%);
   --bg-gradient-onyx: linear-gradient(
     to bottom right,
-    hsl(210, 60%, 45%) 3%,
-    hsl(210, 50%, 20%) 97%
+    var(--neutral-color-light) 3%,
+    var(--neutral-color-dark) 97%
   );
   --bg-gradient-jet: linear-gradient(
       to bottom right,
-      hsla(210, 60%, 15%, 0.251) 0%,
-      hsla(210, 50%, 10%, 0) 100%
+      hsla(210, 10%, 10%, 0.251) 0%,
+      hsla(210, 10%, 5%, 0) 100%
     ),
-    hsl(210, 50%, 12%);
+    var(--neutral-color-dark);
+
+  /* Primary (30%) */
+  --primary-color: hsl(220, 60%, 50%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right,
+    var(--primary-color) 0%,
+    hsla(220, 60%, 50%, 0) 50%
+  );
+
+  /* Secondary (10%) */
+  --secondary-color: hsl(45, 100%, 55%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right,
-    hsl(50, 100%, 70%) 0%,
-    hsla(50, 100%, 65%, 0) 50%
+    var(--secondary-color) 0%,
+    hsla(45, 100%, 50%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
       135deg,
-      hsla(50, 100%, 70%, 0.251) 0%,
-      hsla(50, 100%, 60%, 0) 59.86%
+      hsla(45, 100%, 55%, 0.251) 0%,
+      hsla(45, 100%, 45%, 0) 59.86%
     ),
-    hsl(210, 50%, 12%);
-  --border-gradient-onyx: linear-gradient(
-    to bottom right,
-    hsl(210, 50%, 30%) 0%,
-    hsla(210, 50%, 30%, 0) 50%
-  );
+    var(--neutral-color-dark);
   --text-gradient-yellow: linear-gradient(
     to right,
-    hsl(50, 100%, 70%),
-    hsl(45, 100%, 65%)
+    var(--secondary-color),
+    hsl(40, 100%, 50%)
   );
 
-  /* solid */
-  --jet: hsl(210, 50%, 25%);
-  --onyx: hsl(210, 50%, 15%);
-  --eerie-black-1: hsl(210, 50%, 12%);
-  --eerie-black-2: hsl(210, 50%, 10%);
-  --smoky-black: hsl(210, 50%, 5%);
+  /* Solid Colors */
+  --jet: var(--neutral-color-dark);
+  --onyx: hsl(220, 15%, 20%);
+  --eerie-black-1: hsl(220, 15%, 15%);
+  --eerie-black-2: hsl(220, 15%, 12%);
+  --smoky-black: hsl(220, 10%, 8%);
   --white-1: hsl(0, 0%, 98%);
   --white-2: hsl(0, 0%, 100%);
-  --orange-yellow-crayola: hsl(50, 100%, 70%);
-  --vegas-gold: hsl(50, 55%, 60%);
-  --light-gray: hsl(0, 0%, 85%);
-  --light-gray-70: hsla(0, 0%, 85%, 0.7);
-  --bittersweet-shimmer: hsl(0, 45%, 50%);
+
+  /**
+   * shadow
+   */
+
+  --shadow-1: -4px 8px 24px hsla(220, 60%, 0%, 0.15);
+  --shadow-2: 0 16px 30px hsla(220, 60%, 0%, 0.15);
+  --shadow-3: 0 16px 40px hsla(220, 60%, 0%, 0.25);
+  --shadow-4: 0 25px 50px hsla(220, 60%, 0%, 0.15);
+  --shadow-5: 0 24px 80px hsla(220, 60%, 0%, 0.25);
 
   /**
    * typography
@@ -85,16 +98,6 @@
   --fw-400: 400;
   --fw-500: 500;
   --fw-600: 600;
-
-  /**
-   * shadow
-   */
-
-  --shadow-1: -4px 8px 24px hsla(210, 50%, 0%, 0.25);
-  --shadow-2: 0 16px 30px hsla(210, 50%, 0%, 0.25);
-  --shadow-3: 0 16px 40px hsla(210, 50%, 0%, 0.25);
-  --shadow-4: 0 25px 50px hsla(210, 50%, 0%, 0.15);
-  --shadow-5: 0 24px 80px hsla(210, 50%, 0%, 0.25);
 
   /**
    * transition
