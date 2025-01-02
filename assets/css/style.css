@@ -938,6 +938,7 @@ main {
   width: 100%;
   height: 100%;
   border: none;
+  /* feel free to remove filters if you want a normal map */
   filter: grayscale(1) invert(1);
 }
 
@@ -957,7 +958,7 @@ main {
 }
 
 .form-input {
-  color: var(--white-2);
+  color: var(--white-1);
   font-size: var(--fs-6);
   font-weight: var(--fw-400);
   padding: 13px 20px;
