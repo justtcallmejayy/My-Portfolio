@@ -148,6 +148,10 @@ li {
   list-style: none;
 }
 
+.myImg {
+  border-radius: 18%;
+}
+
 img,
 ion-icon,
 a,
@@ -1051,20 +1055,17 @@ textarea.form-input::-webkit-resizer {
 /**
  * responsive larger than 450px screen
  */
-
 @media (min-width: 450px) {
   /**
    * client
    */
-
   .clients-item {
     min-width: calc(33.33% - 10px);
   }
 
   /**
-   * #PORTFOLIO, BLOG 
+   * #PORTFOLIO, BLOG
    */
-
   .project-img,
   .blog-banner-box {
     height: auto;
@@ -1074,17 +1075,14 @@ textarea.form-input::-webkit-resizer {
 /**
  * responsive larger than 580px screen
  */
-
 @media (min-width: 580px) {
   /**
    * CUSTOM PROPERTY
    */
-
   :root {
     /**
      * typography
      */
-
     --fs-1: 32px;
     --fs-2: 24px;
     --fs-3: 26px;
@@ -1097,7 +1095,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * #REUSED STYLE
    */
-
   .sidebar,
   article {
     width: 520px;
@@ -1125,7 +1122,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * #MAIN
    */
-
   main {
     margin-top: 60px;
     margin-bottom: 100px;
@@ -1134,7 +1130,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * #SIDEBAR
    */
-
   .sidebar {
     max-height: 180px;
     margin-bottom: 30px;
@@ -1195,7 +1190,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * #NAVBAR
    */
-
   .navbar {
     border-radius: 20px 20px 0 0;
   }
@@ -1211,7 +1205,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * #ABOUT
    */
-
   .about .article-title {
     margin-bottom: 20px;
   }
@@ -1221,7 +1214,6 @@ textarea.form-input::-webkit-resizer {
   }
 
   /* service */
-
   .service-item {
     display: flex;
     justify-content: flex-start;
@@ -1240,7 +1232,6 @@ textarea.form-input::-webkit-resizer {
   }
 
   /* testimonials */
-
   .testimonials-title {
     margin-bottom: 25px;
   }
@@ -1277,7 +1268,6 @@ textarea.form-input::-webkit-resizer {
   }
 
   /* testimonials modal */
-
   .modal-container {
     padding: 20px;
   }
@@ -1313,7 +1303,6 @@ textarea.form-input::-webkit-resizer {
   }
 
   /* clients */
-
   .clients-list {
     gap: 50px;
     margin: 0 -30px;
@@ -1328,7 +1317,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * #RESUME
    */
-
   .timeline-list {
     margin-left: 65px;
   }
@@ -1350,7 +1338,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * #PORTFOLIO, BLOG
    */
-
   .project-img,
   .blog-banner-box {
     border-radius: 16px;
@@ -1367,7 +1354,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * #CONTACT
    */
-
   .mapbox {
     height: 380px;
     border-radius: 18px;
@@ -1399,12 +1385,10 @@ textarea.form-input::-webkit-resizer {
 /**
  * responsive larger than 768px screen
  */
-
 @media (min-width: 768px) {
   /**
    * REUSED STYLE
    */
-
   .sidebar,
   article {
     width: 700px;
@@ -1417,7 +1401,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * SIDEBAR
    */
-
   .contacts-list {
     grid-template-columns: 1fr 1fr;
     gap: 30px 15px;
@@ -1426,7 +1409,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * NAVBAR
    */
-
   .navbar-link {
     --fs-8: 15px;
   }
@@ -1434,9 +1416,7 @@ textarea.form-input::-webkit-resizer {
   /**
    * ABOUT
    */
-
   /* testimonials modal */
-
   .testimonials-modal {
     gap: 35px;
     max-width: 680px;
@@ -1449,7 +1429,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * PORTFOLIO
    */
-
   .article-title {
     padding-bottom: 20px;
   }
@@ -1482,7 +1461,6 @@ textarea.form-input::-webkit-resizer {
   }
 
   /* portfolio and blog grid */
-
   .project-list,
   .blog-posts-list {
     grid-template-columns: 1fr 1fr;
@@ -1491,7 +1469,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * CONTACT
    */
-
   .input-wrapper {
     grid-template-columns: 1fr 1fr;
   }
@@ -1505,17 +1482,14 @@ textarea.form-input::-webkit-resizer {
 /**
  * responsive larger than 1024px screen
  */
-
 @media (min-width: 1024px) {
   /**
    * CUSTOM PROPERTY
    */
-
   :root {
     /**
-    * shadow
-    */
-
+     * shadow
+     */
     --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
     --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
     --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
@@ -1524,7 +1498,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * REUSED STYLE
    */
-
   .sidebar,
   article {
     width: 950px;
@@ -1532,9 +1505,8 @@ textarea.form-input::-webkit-resizer {
   }
 
   /**
-   * MAIN 
+   * MAIN
    */
-
   main {
     margin-bottom: 60px;
   }
@@ -1548,7 +1520,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * NAVBAR
    */
-
   .navbar {
     position: absolute;
     bottom: auto;
@@ -1573,22 +1544,18 @@ textarea.form-input::-webkit-resizer {
   /**
    * ABOUT
    */
-
   /* service */
-
   .service-list {
     grid-template-columns: 1fr 1fr;
     gap: 20px 25px;
   }
 
   /* testimonials */
-
   .testimonials-item {
     min-width: calc(50% - 15px);
   }
 
   /* clients */
-
   .clients-item {
     min-width: calc(25% - 38px);
   }
@@ -1596,7 +1563,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * PORTFOLIO
    */
-
   .project-list {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1604,7 +1570,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * BLOG
    */
-
   .blog-banner-box {
     height: 230px;
   }
@@ -1613,12 +1578,10 @@ textarea.form-input::-webkit-resizer {
 /**
  * responsive larger than 1250px screen
  */
-
 @media (min-width: 1250px) {
   /**
    * RESET
    */
-
   body::-webkit-scrollbar {
     width: 20px;
   }
@@ -1646,7 +1609,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * REUSED STYLE
    */
-
   .sidebar,
   article {
     width: auto;
@@ -1659,7 +1621,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * MAIN
    */
-
   main {
     max-width: 1200px;
     margin-inline: auto;
@@ -1678,7 +1639,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * SIDEBAR
    */
-
   .sidebar {
     position: sticky;
     top: 60px;
@@ -1740,9 +1700,8 @@ textarea.form-input::-webkit-resizer {
   }
 
   /**
-	 * RESUME
-	 */
-
+   * RESUME
+   */
   .timeline-text {
     max-width: 700px;
   }
