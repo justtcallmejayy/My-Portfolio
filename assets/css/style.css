@@ -6,13 +6,12 @@
  * @author JusttJayy
  * @project My Portfolio
  * @description Description of the project or the purpose of this CSS file.
- * @version 1.0.0
+ * @version 1.0.1
  * @date 01-01-2025
  * 
  * Copyright (c) 2025 Jay Choksi. All rights reserved.
  * 
- * This stylesheet is part of My Portfolio and is licensed under 
- * [Your Preferred License]. Redistribution or modification without prior 
+ * This stylesheet is part of My Portfolio and
  * permission is prohibited. For inquiries, contact jayy.choksi@gmail.com.
  * 
  * Created with ❤️ by Jay Choksi.
@@ -22,6 +21,7 @@
   #THEME SWITCH
 \*-----------------------------------*/
 
+/* Dark-Light Switch */
 #theme-switch {
   height: 50px;
   width: 50px;
@@ -36,6 +36,7 @@
   right: 20px;
   cursor: pointer;
   transition: background-color var(--transition-speed);
+  z-index: 1000;
 }
 
 #theme-switch svg {
@@ -294,6 +295,12 @@ article {
   background: var(--eerie-black-1);
   border-radius: inherit;
   z-index: -1;
+}
+
+#fontSize {
+  margin-bottom: 16px;
+  padding: 4px;
+  font-size: 14px;
 }
 
 .icon-box ion-icon {
@@ -1112,7 +1119,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   /**
-   * #PORTFOLIO, BLOG
+   * #PORTFOLIO, BLOG 
    */
   .project-img,
   .blog-banner-box {
@@ -1173,6 +1180,16 @@ textarea.form-input::-webkit-resizer {
   main {
     margin-top: 60px;
     margin-bottom: 100px;
+  }
+
+  #theme-switch {
+    top: 15px;
+    right: 15px;
+  }
+
+  .info_more-btn {
+    top: -20px;
+    right: -20px;
   }
 
   /**
@@ -1279,89 +1296,6 @@ textarea.form-input::-webkit-resizer {
     text-align: left;
   }
 
-  /* testimonials */
-  .testimonials-title {
-    margin-bottom: 25px;
-  }
-
-  .testimonials-list {
-    gap: 30px;
-    margin: 0 -30px;
-    padding: 30px;
-    padding-bottom: 35px;
-  }
-
-  .content-card {
-    padding: 30px;
-    padding-top: 25px;
-  }
-
-  .testimonials-avatar-box {
-    transform: translate(30px, -30px);
-    border-radius: 20px;
-  }
-
-  .testimonials-avatar-box img {
-    width: 80px;
-  }
-
-  .testimonials-item-title {
-    margin-bottom: 10px;
-    margin-left: 95px;
-  }
-
-  .testimonials-text {
-    line-clamp: 2;
-    -webkit-line-clamp: 2;
-  }
-
-  /* testimonials modal */
-  .modal-container {
-    padding: 20px;
-  }
-
-  .testimonials-modal {
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    gap: 25px;
-    padding: 30px;
-    border-radius: 20px;
-  }
-
-  .modal-img-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .modal-avatar-box {
-    border-radius: 18px;
-    margin-bottom: 0;
-  }
-
-  .modal-avatar-box img {
-    width: 65px;
-  }
-
-  .modal-img-wrapper > img {
-    display: block;
-    flex-grow: 1;
-    width: 35px;
-  }
-
-  /* clients */
-  .clients-list {
-    gap: 50px;
-    margin: 0 -30px;
-    padding: 45px;
-    scroll-padding-inline: 45px;
-  }
-
-  .clients-item {
-    min-width: calc(33.33% - 35px);
-  }
-
   /**
    * #RESUME
    */
@@ -1433,10 +1367,12 @@ textarea.form-input::-webkit-resizer {
 /**
  * responsive larger than 768px screen
  */
+
 @media (min-width: 768px) {
   /**
    * REUSED STYLE
    */
+
   .sidebar,
   article {
     width: 700px;
@@ -1449,6 +1385,7 @@ textarea.form-input::-webkit-resizer {
   /**
    * SIDEBAR
    */
+
   .contacts-list {
     grid-template-columns: 1fr 1fr;
     gap: 30px 15px;
@@ -1457,6 +1394,7 @@ textarea.form-input::-webkit-resizer {
   /**
    * NAVBAR
    */
+
   .navbar-link {
     --fs-8: 15px;
   }
@@ -1464,7 +1402,9 @@ textarea.form-input::-webkit-resizer {
   /**
    * ABOUT
    */
+
   /* testimonials modal */
+
   .testimonials-modal {
     gap: 35px;
     max-width: 680px;
@@ -1477,6 +1417,7 @@ textarea.form-input::-webkit-resizer {
   /**
    * PORTFOLIO
    */
+
   .article-title {
     padding-bottom: 20px;
   }
@@ -1509,6 +1450,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   /* portfolio and blog grid */
+
   .project-list,
   .blog-posts-list {
     grid-template-columns: 1fr 1fr;
@@ -1517,6 +1459,7 @@ textarea.form-input::-webkit-resizer {
   /**
    * CONTACT
    */
+
   .input-wrapper {
     grid-template-columns: 1fr 1fr;
   }
@@ -1530,14 +1473,17 @@ textarea.form-input::-webkit-resizer {
 /**
  * responsive larger than 1024px screen
  */
+
 @media (min-width: 1024px) {
   /**
    * CUSTOM PROPERTY
    */
+
   :root {
     /**
-     * shadow
-     */
+    * shadow
+    */
+
     --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
     --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
     --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
@@ -1546,6 +1492,7 @@ textarea.form-input::-webkit-resizer {
   /**
    * REUSED STYLE
    */
+
   .sidebar,
   article {
     width: 950px;
@@ -1553,8 +1500,9 @@ textarea.form-input::-webkit-resizer {
   }
 
   /**
-   * MAIN
+   * MAIN 
    */
+
   main {
     margin-bottom: 60px;
   }
@@ -1568,6 +1516,7 @@ textarea.form-input::-webkit-resizer {
   /**
    * NAVBAR
    */
+
   .navbar {
     position: absolute;
     bottom: auto;
@@ -1592,18 +1541,22 @@ textarea.form-input::-webkit-resizer {
   /**
    * ABOUT
    */
+
   /* service */
+
   .service-list {
     grid-template-columns: 1fr 1fr;
     gap: 20px 25px;
   }
 
   /* testimonials */
+
   .testimonials-item {
     min-width: calc(50% - 15px);
   }
 
   /* clients */
+
   .clients-item {
     min-width: calc(25% - 38px);
   }
@@ -1611,6 +1564,7 @@ textarea.form-input::-webkit-resizer {
   /**
    * PORTFOLIO
    */
+
   .project-list {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1618,6 +1572,7 @@ textarea.form-input::-webkit-resizer {
   /**
    * BLOG
    */
+
   .blog-banner-box {
     height: 230px;
   }
@@ -1626,10 +1581,12 @@ textarea.form-input::-webkit-resizer {
 /**
  * responsive larger than 1250px screen
  */
+
 @media (min-width: 1250px) {
   /**
    * RESET
    */
+
   body::-webkit-scrollbar {
     width: 20px;
   }
@@ -1657,6 +1614,7 @@ textarea.form-input::-webkit-resizer {
   /**
    * REUSED STYLE
    */
+
   .sidebar,
   article {
     width: auto;
@@ -1669,6 +1627,7 @@ textarea.form-input::-webkit-resizer {
   /**
    * MAIN
    */
+
   main {
     max-width: 1200px;
     margin-inline: auto;
@@ -1687,6 +1646,7 @@ textarea.form-input::-webkit-resizer {
   /**
    * SIDEBAR
    */
+
   .sidebar {
     position: sticky;
     top: 60px;
@@ -1748,9 +1708,76 @@ textarea.form-input::-webkit-resizer {
   }
 
   /**
-   * RESUME
-   */
+	 * RESUME
+	 */
+
   .timeline-text {
     max-width: 700px;
+  }
+}
+
+/* Hide Dark-Light Switch for screen widths less than 425px */
+@media (max-width: 425px) {
+  #theme-switch {
+    display: none;
+  }
+}
+
+/* Show Contact Button */
+.info_more-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  border-radius: 0 15px;
+  font-size: 13px;
+  color: var(--orange-yellow-crayola);
+  background: var(--border-gradient-onyx);
+  padding: 10px;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-1);
+  z-index: 1;
+}
+
+.info_more-btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: var(--bg-gradient-jet);
+  transition: var(--transition-1);
+  z-index: -1;
+}
+
+.info_more-btn:hover,
+.info_more-btn:focus {
+  background: var(--bg-gradient-yellow-1);
+}
+
+.info_more-btn:hover::before,
+.info_more-btn:focus::before {
+  background: var(--bg-gradient-yellow-2);
+}
+/* Display Show Contact button for screen widths smaller than 375px */
+@media (max-width: 375px) {
+  .info_more-btn {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure it is on top of other elements */
+    font-size: 14px;
+    background: var(--primary-color); /* Ensure visibility */
+    color: var(--white-1); /* Text color */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info_more-btn span {
+    display: inline; /* Ensure text is visible */
+    font-size: 12px;
   }
 }
