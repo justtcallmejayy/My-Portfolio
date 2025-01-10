@@ -1389,6 +1389,7 @@ textarea.form-input::-webkit-resizer {
   .contacts-list {
     grid-template-columns: 1fr 1fr;
     gap: 30px 15px;
+        border-radius: 35px 0; /* Rounded edges for pill shape */
   }
 
   /**
@@ -1402,17 +1403,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * ABOUT
    */
-
-  /* testimonials modal */
-
-  .testimonials-modal {
-    gap: 35px;
-    max-width: 680px;
-  }
-
-  .modal-avatar-box img {
-    width: 80px;
-  }
 
   /**
    * PORTFOLIO
@@ -1549,17 +1539,6 @@ textarea.form-input::-webkit-resizer {
     gap: 20px 25px;
   }
 
-  /* testimonials */
-
-  .testimonials-item {
-    min-width: calc(50% - 15px);
-  }
-
-  /* clients */
-
-  .clients-item {
-    min-width: calc(25% - 38px);
-  }
 
   /**
    * PORTFOLIO
@@ -1675,7 +1654,8 @@ textarea.form-input::-webkit-resizer {
   }
 
   .info_more-btn {
-    display: none;
+
+        border-radius: 35px 0; /* Rounded edges for pill shape */
   }
 
   .sidebar-info_more {
@@ -1723,29 +1703,23 @@ textarea.form-input::-webkit-resizer {
   }
 }
 
-/* Show Contact Button */
+/* Default styling for Show Contact button */
 .info_more-btn {
   position: absolute;
   top: -15px;
   right: -15px;
-  border-radius: 0 15px;
+  border-radius: 0 35px;
   font-size: 13px;
   color: var(--orange-yellow-crayola);
   background: var(--border-gradient-onyx);
-  padding: 10px;
+  padding: 10px 20px;
   box-shadow: var(--shadow-2);
   transition: var(--transition-1);
   z-index: 1;
 }
 
-.info_more-btn::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  border-radius: inherit;
-  background: var(--bg-gradient-jet);
-  transition: var(--transition-1);
-  z-index: -1;
+.info_more-btn span {
+  display: none;
 }
 
 .info_more-btn:hover,
@@ -1757,27 +1731,25 @@ textarea.form-input::-webkit-resizer {
 .info_more-btn:focus::before {
   background: var(--bg-gradient-yellow-2);
 }
-/* Display Show Contact button for screen widths smaller than 375px */
+
+/* Styling for smaller screens - Show Contact button */
 @media (max-width: 375px) {
   .info_more-btn {
-    display: block;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000; /* Ensure it is on top of other elements */
-    font-size: 14px;
+    /* bottom: 20px; Adjust distance from the bottom */
+    /* left: 50%; Center horizontally */
+    transform: translateX(-50%); /* Center alignment */
+    z-index: 1000; /* Ensure it appears on top */
+    font-size: 14px; /* Slightly larger font */
+    padding: 12px 30px; /* Pill shape dimensions */
+    border-radius: 35px 0; /* Rounded edges for pill shape */
     background: var(--primary-color); /* Ensure visibility */
     color: var(--white-1); /* Text color */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    box-shadow: var(--shadow-3); /* Enhanced visibility with shadow */
   }
 
   .info_more-btn span {
     display: inline; /* Ensure text is visible */
-    font-size: 12px;
+    font-size: 14px;
   }
 }
