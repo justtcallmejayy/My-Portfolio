@@ -1992,3 +1992,94 @@ textarea.form-input::-webkit-resizer {
     padding: 8px 10px;
   }
 }
+/*-----------------------------------*\
+  #SOCIAL LIST
+\*-----------------------------------*/
+
+/* Social List Container */
+.social-list {
+  display: flex; /* Align icons horizontally */
+  justify-content: center; /* Center the list */
+  align-items: center; /* Center vertically */
+  gap: 25px; /* Space between items */
+  list-style: none; /* Remove bullets */
+  padding: 0; /* No padding */
+  margin: 20px 0; /* Space above and below */
+}
+
+/* Social List Items */
+.social-item {
+  list-style: none;
+}
+
+/* Social Links */
+.social-link {
+  display: flex; /* Ensures icons are centered */
+  justify-content: center;
+  align-items: center;
+  width: 60px; /* Set size */
+  height: 60px;
+  border-radius: 15px; /* Circular buttons */
+  background: var(--eerie-black-1); /* Subtle dark background */
+  color: var(--orange-yellow-crayola); /* Icon color */
+  font-size: 26px; /* Icon size */
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.2); /* Subtle shadow */
+  transition: all 0.4s ease; /* Smooth animation */
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none; /* Remove underline */
+}
+
+/* Add Gradient Outline */
+.social-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 2px; /* Thickness of gradient border */
+  background: var(--bg-gradient-yellow-1); /* Gradient outline */
+  --webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: exclude;
+  mask-composite: exclude;
+  z-index: -1;
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+/* Hover and Focus Effects */
+.social-link:hover,
+.social-link:focus {
+  color: var(--smoky-black); /* Change icon color */
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px hsla(0, 0%, 0%, 0.3),
+    0 0 15px var(--orange-yellow-crayola);
+}
+
+.social-link:hover::before,
+.social-link:focus::before {
+  opacity: 1; /* Show the gradient border */
+}
+
+.social-link:hover i,
+.social-link:focus i {
+  transform: scale(1.2); /* Enlarge icon slightly */
+}
+
+/* Icon Styling */
+.social-link i {
+  transition: transform 0.3s ease; /* Smooth scaling */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 426px) {
+  .social-link {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .social-list {
+    gap: 20px;
+  }
+}
