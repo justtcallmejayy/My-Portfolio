@@ -2001,7 +2001,7 @@ textarea.form-input::-webkit-resizer {
   display: flex; /* Align icons horizontally */
   justify-content: center; /* Center the list */
   align-items: center; /* Center vertically */
-  gap: 25px; /* Space between items */
+  gap: 35px; /* Space between items */
   list-style: none; /* Remove bullets */
   padding: 0; /* No padding */
   margin: 20px 0; /* Space above and below */
