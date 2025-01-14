@@ -2039,7 +2039,8 @@ textarea.form-input::-webkit-resizer {
   border-radius: 15px;
   padding: 2px; /* Thickness of gradient border */
   background: var(--bg-gradient-yellow-1); /* Gradient outline */
-  --webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  --webkit-mask: linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: exclude;
   mask-composite: exclude;
   z-index: -1;
