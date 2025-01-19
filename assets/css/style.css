@@ -19,39 +19,63 @@
  */
 
 /*-----------------------------------*\
-  #THEME SWITCH
+  #THEME SWITCH BUTTON
 \*-----------------------------------*/
 
 #theme-switch {
-  height: 50px;
-  width: 50px;
-  padding: 0;
-  border-radius: 50%;
-  background-color: var(--base-variant);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   top: 20px;
   right: 20px;
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(
+    --base-variant,
+    #f2f2f2
+  ); /* Fallback if variable not defined */
   cursor: pointer;
-  transition: background-color var(--transition-speed);
+  z-index: 1000; /* Keep above other elements */
+
+  /* Transition for smooth background/icon color changes */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Icons inside the button */
 #theme-switch svg {
-  fill: var(--primary-color);
+  fill: var(--primary-color, #333);
+  width: 24px;
+  height: 24px;
+  transition: fill 0.3s ease;
 }
 
+/* Hide dark mode icon (moon) by default */
 #theme-switch svg:last-child {
   display: none;
 }
 
+/* When dark mode is active, swap icons */
 .darkmode #theme-switch svg:first-child {
   display: none;
 }
-
 .darkmode #theme-switch svg:last-child {
   display: block;
+}
+
+/* Hover effect */
+#theme-switch:hover {
+  transform: scale(1.1);
+}
+
+/* On dark mode, change button background if desired */
+.darkmode #theme-switch {
+  background-color: #333; /* or your chosen color */
+}
+.darkmode #theme-switch svg {
+  fill: #f2f2f2; /* Lighter fill for dark background */
 }
 
 /*-----------------------------------*\
@@ -174,6 +198,52 @@
    */
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
+}
+
+/*-----------------------------------*\
+  #DARK MODE OVERRIDES
+\*-----------------------------------*/
+
+:root.darkmode {
+  /* Neutral Colors */
+  --neutral-color-light: hsl(0, 0%, 8%); /* Dark background base */
+  --neutral-color-dark: hsl(
+    0,
+    0%,
+    15%
+  ); /* Slightly lighter dark for gradients */
+
+  /* Example dark gradients (used in background, border, etc.) */
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(0, 0%, 10%) 3%,
+    hsl(0, 0%, 5%) 97%
+  );
+  --bg-gradient-jet: linear-gradient(
+      to bottom right,
+      hsla(0, 0%, 15%, 0.25) 0%,
+      hsla(0, 0%, 15%, 0) 100%
+    ),
+    hsl(0, 0%, 10%);
+
+  /* Primary & Secondary Colors (keep brand consistency, but slightly adjust if needed) */
+  --primary-color: hsl(220, 60%, 60%); /* A bit lighter for dark backgrounds */
+  --secondary-color: hsl(45, 100%, 60%);
+
+  /* Flip Onyx/Jet for a dark theme. Adjust as you like. */
+  --onyx: hsl(0, 0%, 12%); /* Very dark container background */
+  --jet: hsl(0, 0%, 25%); /* Slightly lighter black or dark gray */
+
+  /* White flips to near-white text (so text is visible on dark backgrounds) */
+  --white-1: hsl(0, 0%, 93%);
+  --white-2: hsl(0, 0%, 88%);
+
+  /* Shadows can be lighter for dark backgrounds to keep them subtle */
+  --shadow-1: 0 4px 8px hsla(0, 0%, 100%, 0.05);
+  --shadow-2: 0 8px 16px hsla(0, 0%, 100%, 0.05);
+  --shadow-3: 0 16px 40px hsla(0, 0%, 100%, 0.07);
+
+  /* If you use .bg-gradient-yellow-1 or .bg-gradient-yellow-2, you can keep them or slightly tweak. */
 }
 
 /*-----------------------------------*\
