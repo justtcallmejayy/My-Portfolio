@@ -1,42 +1,23 @@
 "use strict";
 
-/*-----------------------------------*\
-  #1. Helper Function
-\*-----------------------------------*/
-
-/**
- * Toggles the 'active' class on a given element.
- * @param {HTMLElement} elem - The element to toggle.
- */
+// Element toggle function
 const elementToggleFunc = function (elem) {
   elem.classList.toggle("active");
 };
 
-/*-----------------------------------*\
-  #2. Sidebar Toggle
-\*-----------------------------------*/
-
-// Variables
+// Sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
-// Toggle sidebar visibility
+// Sidebar toggle functionality
 sidebarBtn.addEventListener("click", () => {
   elementToggleFunc(sidebar);
 });
 
-/*-----------------------------------*\
-  #3. Portfolio Filter
-\*-----------------------------------*/
-
-// Variables
+// Portfolio filter variables
 const filterBtns = document.querySelectorAll("[data-filter-btn]");
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
-/**
- * Clicking a filter button highlights the button (active)
- * and shows/hides portfolio items matching its category.
- */
 filterBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     const category = btn.innerText.toLowerCase();
@@ -48,7 +29,6 @@ filterBtns.forEach((btn) => {
     // Filter portfolio items
     filterItems.forEach((item) => {
       const itemCategory = item.dataset.category;
-
       if (category === "all" || category === itemCategory) {
         item.classList.add("active");
       } else {
@@ -58,18 +38,12 @@ filterBtns.forEach((btn) => {
   });
 });
 
-/*-----------------------------------*\
-  #4. Contact Form Validation
-\*-----------------------------------*/
-
-// Variables
+// Contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-/**
- * Enable/Disable the submit button based on form validity.
- */
+// Enable/Disable submit button based on form validation
 formInputs.forEach((input) => {
   input.addEventListener("input", () => {
     if (form.checkValidity()) {
@@ -80,69 +54,44 @@ formInputs.forEach((input) => {
   });
 });
 
-/*-----------------------------------*\
-  #5. Page Navigation
-\*-----------------------------------*/
-
-// Variables
+// Page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-/**
- * Clicking a nav link activates the associated page
- * and deactivates other pages.
- */
+// Add event listener to each navigation link
 navigationLinks.forEach((link) => {
   link.addEventListener("click", () => {
     const targetPage = link.innerText.toLowerCase();
 
-    // Toggle active page
+    // Toggle active page and link
     pages.forEach((page) => {
       page.classList.toggle("active", page.dataset.page === targetPage);
     });
-
-    // Toggle active nav link
     navigationLinks.forEach((nav) => nav.classList.remove("active"));
     link.classList.add("active");
 
-    // Scroll to the top
+    // Scroll to the top of the page
     window.scrollTo(0, 0);
   });
 });
 
-/*-----------------------------------*\
-  #6. Dark Mode Toggle
-\*-----------------------------------*/
+// DARK MODE SETUP
+let darkmode = localStorage.getItem("darkmode");
+const themeSwitch = document.getElementById("theme-switch");
 
-document.addEventListener("DOMContentLoaded", () => {
-  const themeSwitch = document.getElementById("theme-switch");
-  let darkMode = localStorage.getItem("darkMode");
+/**
+ * Toggles the "darkmode" class on <body>,
+ * saving or removing the preference in localStorage.
+ */
+const toggleDarkMode = () => {
+  const isDark = document.body.classList.toggle("darkmode");
+  localStorage.setItem("darkmode", isDark ? "active" : null);
+};
 
-  /**
-   * Functions to enable or disable Dark Mode.
-   */
-  const enableDarkMode = () => {
-    document.body.classList.add("darkmode");
-    localStorage.setItem("darkMode", "enabled");
-  };
+// If the saved preference in localStorage is 'active', enable dark mode on load
+if (darkmode === "active") {
+  document.body.classList.add("darkmode");
+}
 
-  const disableDarkMode = () => {
-    document.body.classList.remove("darkmode");
-    localStorage.setItem("darkMode", "disabled");
-  };
-
-  // Load the saved preference on page load
-  if (darkMode === "enabled") {
-    enableDarkMode();
-  }
-
-  // Button click toggles dark mode
-  themeSwitch.addEventListener("click", () => {
-    darkMode = localStorage.getItem("darkMode"); // Refresh state from localStorage
-    if (darkMode !== "enabled") {
-      enableDarkMode();
-    } else {
-      disableDarkMode();
-    }
-  });
-});
+// Listen for clicks on the theme switch button
+themeSwitch.addEventListener("click", toggleDarkMode);
