@@ -14,7 +14,7 @@ Welcome to my portfolio! 🎨💻 This project showcases my journey as a develop
 ---
 
 ## 🛠️ Tech Stack
-- **Frontend**: HTML, CSS (with custom variables and responsive design), JavaScript.
+- **Frontend**: HTML, CSS (with custom variables and responsive design), JavaScript, Bootstrap.
 - **Styling**: Gradient effects, hover animations, and smooth transitions.
 - **Git/GitHub**: Version control and hosting.
 
