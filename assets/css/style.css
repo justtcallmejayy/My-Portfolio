@@ -2362,3 +2362,45 @@ html {
   background-color: var(--vegas-gold);
   transform: scale(1.05);
 }
+footer {
+  background-color: var(
+    --eerie-black-2
+  ); /* Dark background to match the site's theme */
+  color: var(--light-gray); /* Light text for contrast */
+  text-align: center; /* Center the text */
+  padding: 20px 0; /* Add padding for spacing */
+  font-size: var(--fs-6); /* Consistent font size */
+  border-top: 1px solid var(--jet); /* Subtle border for separation */
+  box-shadow: var(--shadow-2); /* Add shadow for depth */
+  margin-top: 40px; /* Space from the content above */
+}
+
+footer p {
+  margin: 0; /* Remove default margin for better alignment */
+  letter-spacing: 0.5px; /* Slight letter spacing for readability */
+  font-weight: var(--fw-400); /* Consistent font weight */
+}
+footer p:hover {
+  color: var(--orange-yellow-crayola); /* Highlight color on hover */
+  transition: color 0.3s ease;
+}
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* This will push the footer to the bottom if content is short */
+}
+
+footer {
+  flex-shrink: 0; /* Prevent footer from shrinking */
+}
+@media (max-width: 768px) {
+  footer {
+    padding: 15px 0; /* Reduce padding on smaller screens */
+    font-size: var(--fs-7); /* Slightly smaller font size */
+  }
+}
