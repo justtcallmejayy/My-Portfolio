@@ -6,8 +6,8 @@
  * @author JusttJayy
  * @project My Portfolio
  * @description Description of the project or the purpose of this CSS file.
- * @version 1.0.0
- * @date 01-01-2025
+ * @version 1.2.0
+ * @date 08-02-2025
  * 
  * Copyright (c) 2025 Jay Choksi. All rights reserved.
  * 
@@ -130,7 +130,7 @@
    */
   --light-gray: hsl(0, 0%, 45%);
   --light-gray-70: hsl(0, 0%, 60%);
-  --orange-yellow-crayola: hsl(39, 100%, 50%);
+  --orange-yellow-crayola: #cd931e;
   --blue-green: hsl(180, 100%, 40%);
   --bittersweet-shimmer: hsl(0, 70%, 50%);
   --vegas-gold: hsl(51, 52%, 51%);
@@ -408,14 +408,13 @@ main {
   min-width: 259px;
 }
 
-.about-text{
+.about-text {
   text-align: justify;
 }
 
-#newSpan{
+#newSpan {
   color: black;
 }
-
 
 /*-----------------------------------*\
   #SIDEBAR
@@ -2262,4 +2261,70 @@ body {
 body.darkmode {
   background: var(--neutral-color-light);
   color: var(--white-1);
+}
+
+/* Displaying resume  */
+.resume-viewer {
+  margin: 1px 0;
+  padding: 20px;
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  box-shadow: var(--shadow-3);
+  text-align: center;
+}
+
+.resume-viewer h3 {
+  font-size: var(--fs-2);
+  color: var(--orange-yellow-crayola);
+  margin-bottom: 1px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.resume-viewer iframe {
+  width: 100%;
+  height: 800px;
+  border: 1px solid var(--jet);
+  border-radius: 10px;
+  box-shadow: var(--shadow-2);
+  background-color: var(--onyx);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resume-viewer iframe {
+    height: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-viewer iframe {
+    height: 400px;
+  }
+}
+
+/* Code for download my btn */
+.download-resume-btn {
+  display: inline-block;
+  margin-top: 1px;
+  margin-bottom: 5px;
+  padding: 6px 8px;
+  background-color: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+  font-size: var(--fs-5);
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.5s ease, transform 0.2s ease;
+  box-shadow: var(--shadow-2);
+}
+
+.download-resume-btn i {
+  margin-right: 5px;
+}
+
+.download-resume-btn:hover {
+  background-color:hsl(44, 100%, 6%);
+  transform: scale(1.05);
 }
