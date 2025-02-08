@@ -95,3 +95,13 @@ if (darkmode === "active") {
 
 // Listen for clicks on the theme switch button
 themeSwitch.addEventListener("click", toggleDarkMode);
+
+const backToTopBtn = document.querySelector(".back-to-top-btn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+});

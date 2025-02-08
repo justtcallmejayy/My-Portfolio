@@ -2319,12 +2319,46 @@ body.darkmode {
   transition: background-color 0.5s ease, transform 0.2s ease;
   box-shadow: var(--shadow-2);
 }
+html {
+  scroll-behavior: smooth;
+}
+
+/* Style for Highlighting Links */
+.resume-link-highlight {
+  color: var(--orange-yellow-crayola);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.resume-link-highlight:hover {
+  color: var(--vegas-gold);
+}
 
 .download-resume-btn i {
   margin-right: 5px;
 }
 
 .download-resume-btn:hover {
-  background-color:hsl(44, 100%, 6%);
+  background-color: hsl(44, 100%, 6%);
+  transform: scale(1.05);
+}
+/* Back to TOP */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  background-color: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+  padding: 10px 15px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: var(--fs-6);
+  display: none; /* Hidden by default */
+  box-shadow: var(--shadow-3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-to-top-btn:hover {
+  background-color: var(--vegas-gold);
   transform: scale(1.05);
 }
