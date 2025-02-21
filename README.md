@@ -1,7 +1,7 @@
 # My Portfolio
 
 Welcome to my portfolio! 🎨💻 This project showcases my journey as a developer and designer, featuring my projects, blog, and other cool stuff I'm working on. Let's dive in! 🚀
-check out my webpage here: www.jayynkchoksi.com
+check out my webpage here: [www.jayynkchoksi.com](https://jayynkchoksi.com/)
 
 ---
 
