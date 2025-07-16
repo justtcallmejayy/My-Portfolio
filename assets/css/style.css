@@ -172,7 +172,7 @@
   /**
    * transition
    */
-  --transition-1: 0.25s ease;
+  --transition-1: 0.25s ease-in-out;
   --transition-2: 0.5s ease-in-out;
 }
 
@@ -1019,10 +1019,10 @@ main {
 }
 
 .project-item-icon-box {
-  --scale: 0.8;
+  --scale: 20;
 
-  background: var(--jet);
-  color: var(--orange-yellow-crayola);
+  background: var(--border-gradient-onyx);
+  color: var(--bg-gradient-onyx);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1041,7 +1041,7 @@ main {
 }
 
 .project-item-icon-box ion-icon {
-  --ionicon-stroke-width: 50px;
+  --ionicon-stroke-width: 100px;
 }
 
 .project-img img {
